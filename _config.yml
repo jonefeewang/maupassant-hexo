@@ -17,14 +17,13 @@ gitalk: ## See: https://github.com/gitalk/gitalk
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
   admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
 valine: ## See: https://valine.js.org
-  enable: false ## If you want to use Valine comment system, please set the value to true.
-  appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
-  appkey: ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
-  serverURLs: ## If you are the "LeanCloud" in China, then this option is not mandatory to fill out. REST API Server Url" of your "LeanCloud, e.g. https://prbbl2jr.api.lncldglobal.com
+  enable: true ## If you want to use Valine comment system, please set the value to true.
+  appid: FNjCNRwQqC3sTPP04DfRFIk9-gzGzoHsz ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  appkey: LzCq5t6a6RTkwXQVr8xLk0yj ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
   notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
-  verify: false ## Validation code.
-  placeholder: Just so so ## Comment box placeholders.
-  avatar: "mm" ## Gravatar type, see https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  verify: true ## Validation code.
+  placeholder: '请理性评论'  ## Comment box placeholders.
+  avatar: monsterid ## Gravatar type, see https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
   pageSize: 10 ## Number of comments per page.
   guest_info: nick,mail,link ## Attributes of reviewers.
 minivaline: ## See: https://github.com/MiniValine/MiniValine
@@ -58,20 +57,19 @@ twikoo: ## See: https://twikoo.js.org
   region: ## Tencent CloudBase region, e.g. ap-shanghai
   path: ## Article path, e.g. window.location.pathname
 
-google_search: true ## Use Google search, true/false.
-baidu_search: false ## Use Baidu search, true/false.
+google_search: false ## Use Google search, true/false.
+baidu_search: true ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
-microsoft_clarity: ## Your Microsoft Clarity tracking id, e.g. zg2ctuea9j
 fancybox: true ## If you want to use fancybox please set the value to true.
-show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
-shareto: false ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
-busuanzi: false ## If you want to use Busuanzi page views please set the value to true.
-wordcount: false ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
-widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+shareto: true ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
+busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+wordcount: true ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
+widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
 canvas_nest:
   enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
   color: ## RGB value of the color, e.g. "100,99,98"
@@ -86,10 +84,6 @@ donate:
   btc_qr: ## Path of Bitcoin QRcode image, e.g. /img/BTCQR.png
   btc_key: ## Bitcoin key, e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L
   paypal_url: ## Paypal URL, e.g. https://www.paypal.me/tufu9441
-post_copyright:
-  enable: false ## If you want to display the copyright info after each post, please set the value to true and fill the following items on your need.
-  author: ## Your author name, e.g. tufu9441
-  copyright_text: ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
 love: false ## If you want the love to appear when you click anywhere, set the value to true.
 plantuml: ## Using PlantUML to generate UML diagram, must install hexo-filter-plantuml (https://github.com/miao1007/hexo-filter-plantuml).
   render: "PlantUMLServer" ## Local or PlantUMLServer.
@@ -98,7 +92,11 @@ copycode: true ## If you want to enable one-click copy of the code blocks, set t
 dark: false ## If you want to toggle between light/dark themes, set the value to true.
 totop: true ## If you want to use the rocketship button to return to the top, set the value to true.
 external_css: false ## If you want to load an external CSS file, set the value to true and create a file named "external.css" in the source/css folder.
-post_content_length: 180 ## Set the length of the post summary displayed on home page when no description written.
+
+post_copyright:
+  enable: true ## If you want to display the copyright info after each post, please set the value to true and fill the following items on your need.
+  author: 王军飞 jonefeewang@outlook.com ## Your author name, e.g. tufu9441
+  copyright_text: 原创文章转载请注明出处 ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
 
 menu:
   - page: home
@@ -114,7 +112,7 @@ menu:
     directory: atom.xml
     icon: fa-rss
 
-widgets: ## Seven widgets in sidebar provided: search, info, category, tag, recent_posts, recent_comments and links.
+widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
   - info
   - category
@@ -125,16 +123,13 @@ widgets: ## Seven widgets in sidebar provided: search, info, category, tag, rece
 
 info:
   avatar: /img/avatar.png
-  discription: To be a better man.
+  discription: Always be the best
   outlinkitem:
-    - name: twitter
-      outlink: https://twitter.com/username
-      message: Twitter
     - name: envelope
-      outlink: mailto:admin@domain.com
+      outlink: mailto:jonefeewang@outlook.com
       message: Email
     - name: github
-      outlink: https://github.com/username
+      outlink: https://github.com/jonefeewang
       message: Github
     - name: rss
       outlink: /atom.xml
@@ -143,16 +138,6 @@ info:
 links:
   - title: site-name1
     url: http://www.example1.com/
-    src: https://www.example1.com/favicon.ico
-    desc: XXX's Blog
-  - title: site-name2
-    url: http://www.example2.com/
-    src: https://www.example1.com/favicon.ico
-    desc: YYY's Blog
-  - title: site-name3
-    url: http://www.example3.com/
-    src: https://www.example3.com/favicon.ico
-    desc: ZZZ's Blog
 
 timeline:
   - num: 1
